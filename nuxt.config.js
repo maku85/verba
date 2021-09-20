@@ -50,4 +50,8 @@ export default {
   },
 
   build: {},
+
+  router: {
+    base: '/verba/',
+  },
 }
