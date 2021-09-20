@@ -1,0 +1,8 @@
+---
+id: 9
+word: epifenomeno
+pronunciation: e-pi-fe-nò-me-no
+meaning: in filosofia, aspetto secondario, collaterale, conseguente di un fenomeno primario senza apparente rapporto con esso; in medicina, sintomo collaterale
+etimology: dal greco composto da 'epi'(sopra) e 'fainómenon' (fenomeno).
+details: Il concetto di epifenomeno si origina nell'ambito del materialismo psicofisico e degli psicologi sostenitori dell'origine somatica dell'emozione per i quali il sentimento di piacere o dolore di un'emozione è l'effetto di un cambiamento fisiologico. In tal senso il termine è stato coniato ed inteso dai positivisti inglesi nell'Ottocento e in particolare dal biologo e pensatore Thomas Henry Huxley. Questi vedeva nella coscienza un tipico epifenomeno, non avente di per sé nessuna reale consistenza ma avente, in certe condizioni, chiara origine nel sistema nervoso dell'uomo ma tale da venire percepito come ad esso non facilmente riconducibile.
+---
