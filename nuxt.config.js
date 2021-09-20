@@ -4,8 +4,8 @@ export default {
   target: 'static',
 
   head: {
-    titleTemplate: '%s - verba',
-    title: 'verba',
+    titleTemplate: '%s',
+    title: 'Verba',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
