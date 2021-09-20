@@ -3,7 +3,7 @@
   "short_name": "verba",
   "description": "[![ci](https://github.com/maku85/verba/actions/workflows/ci.yml/badge.svg)](https://github.com/maku85/verba/actions/workflows/ci.yml)",
   "icons": [],
-  "start_url": "/?standalone=true",
+  "start_url": "/verba/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
   "lang": "en"
