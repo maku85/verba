@@ -1,5 +1,7 @@
 # verba
 
+[![ci](https://github.com/maku85/verba/actions/workflows/ci.yml/badge.svg)](https://github.com/maku85/verba/actions/workflows/ci.yml)
+
 ## Build Setup
 
 ```bash
