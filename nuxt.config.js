@@ -41,6 +41,7 @@ export default {
       name: 'Verba',
       lang: 'it',
       useWebmanifestExtension: false,
+      theme_color: '#e6ecee',
     },
   },
 

@@ -22,7 +22,13 @@
 
         <v-tooltip bottom>
           <template #activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" @click="fetchData()" v-on="on">
+            <v-btn
+              icon
+              v-bind="attrs"
+              aria-label="Mescola"
+              @click="fetchData()"
+              v-on="on"
+            >
               <v-icon>mdi-reload</v-icon>
             </v-btn>
           </template>
@@ -30,7 +36,13 @@
         </v-tooltip>
         <v-tooltip bottom>
           <template #activator="{ on, attrs }">
-            <v-btn icon v-bind="attrs" @click="info = true" v-on="on">
+            <v-btn
+              icon
+              v-bind="attrs"
+              aria-label="About"
+              @click="info = true"
+              v-on="on"
+            >
               <v-icon>mdi-information-outline</v-icon>
             </v-btn>
           </template>
