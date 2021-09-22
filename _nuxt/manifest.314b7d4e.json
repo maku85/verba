@@ -1,0 +1,53 @@
+{
+  "name": "Verba",
+  "short_name": "verba",
+  "description": "[![ci](https://github.com/maku85/verba/actions/workflows/ci.yml/badge.svg)](https://github.com/maku85/verba/actions/workflows/ci.yml)",
+  "icons": [
+    {
+      "src": "/verba/_nuxt/icons/icon_64x64.4b642c.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_120x120.4b642c.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_144x144.4b642c.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_152x152.4b642c.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_192x192.4b642c.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_384x384.4b642c.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/verba/_nuxt/icons/icon_512x512.4b642c.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/verba/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "it"
+}
