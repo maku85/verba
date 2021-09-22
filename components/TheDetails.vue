@@ -9,15 +9,23 @@
         <p class="font-italic font-weight-light text-lowercase">
           [{{ item.pronunciation }}]
         </p>
-        <p v-html="item.etimology"></p>
+        <p>
+          <strong>Etimologia:</strong>
+          <span v-html="item.etimology"></span>
+        </p>
         <p v-html="item.meaning"></p>
         <p v-if="item.details">
           <v-divider class="pb-4"></v-divider>
           <strong>Curiosità!</strong><br /><span v-html="item.details"></span>
         </p>
-        <div v-if="item.synonyms">
+        <div v-if="item.synonyms || item.antonyms">
           <v-divider class="pb-4"></v-divider>
-          <strong>Sinonimi:</strong> {{ item.synonyms }}
+          <div v-if="item.synonyms">
+            <strong>Sinonimi:</strong> {{ item.synonyms }}
+          </div>
+          <div v-if="item.antonyms">
+            <strong>Contrari:</strong> {{ item.antonyms }}
+          </div>
         </div>
       </v-card-text>
 

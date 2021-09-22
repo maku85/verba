@@ -1,7 +1,8 @@
 ---
-id: 20
+id: 9
 word: decettivo
 pronunciation: de-cet-tì-vo
-meaning: Ingannevole
-etimology: voce dotta recuperata dal latino tardo deceptivus, derivato da decìpere ‘ingannare’ — con successiva influenza dell’inglese deceptive, che ha la stessa origine.
+meaning: Nel linguaggio giuridico, ingannevole, che trae o può trarre in inganno e indurre in errore
+etimology: dal latino <em>deceptivus</em>, derivato da <em>decìpere</em> ("ingannare")
+synonyms: ingannevole, illusorio, falso
 ---

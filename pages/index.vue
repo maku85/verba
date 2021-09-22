@@ -35,11 +35,12 @@ export default {
       this.details = await this.$content('words', selectedItem.slug).fetch()
     },
     async fetchData(searchTerm = '') {
+      const numOfItems = 20
       const ids = []
       const whereConditions = {}
       if (!searchTerm) {
-        while (ids.length < 20) {
-          const r = Math.floor(Math.random() * 21) + 1
+        while (ids.length < numOfItems) {
+          const r = Math.floor(Math.random() * numOfItems) + 1
           if (!ids.includes(r)) ids.push(r)
         }
         Object.assign(whereConditions, { id: { $in: ids } })

@@ -1,7 +1,7 @@
 ---
-id: 13
-word: Idioletto
+id: 15
+word: idioletto
 pronunciation: i-dio-lèt-to
-meaning: Insieme degli usi linguistici caratteristico di una persona, varietà linguistica di un individuo
-etimology: dall’inglese idiolect, modellato su dialect con l’elemento greci idio- ‘privato, specifico’.
+meaning: Insieme di strutture linguistiche che una persona, o un gruppo di parlanti, adopera e possiede. Comprende il lessico, la grammatica e la pronuncia
+etimology: composta dal prefisso greco <em>idio-</em> ("proprio", "personale") e <em>dialetto</em>
 ---

@@ -1,7 +1,7 @@
 ---
-id: 11
+id: 14
 word: ferino
 pronunciation: fe-rì-no
 meaning: Di fiera; selvaggio, crudele, bestiale
-etimology: dal latino 'ferinus', derivato da 'fera' (fiera, bestia feroce).
+etimology: dal latino <em>ferinus</em>, derivato da <em>fera</em> ("fiera", "bestia feroce")
 ---

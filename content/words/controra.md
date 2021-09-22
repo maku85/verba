@@ -1,7 +1,7 @@
 ---
-id: 18
+id: 7
 word: controra
 pronunciation: con-tró-ra
-meaning: Prime ore del pomeriggio nella stagione calda, che sono destinate al riposo; siesta
-etimology: composto di contro- e ora.
+meaning: Nell'italia meridionale, prime ore del pomeriggio nella stagione estiva, destinate al riposo; ora oltre la quale la polizia impone ai sorvegliati di trovarsi in casa
+etimology: composto di <em>contro-</em> e <em>ora</em>.
 ---
