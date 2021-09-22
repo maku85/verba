@@ -49,5 +49,6 @@
   "start_url": "/verba/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#e6ecee",
   "lang": "it"
 }
