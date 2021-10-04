@@ -2,6 +2,15 @@
 
 [![ci](https://github.com/maku85/verba/actions/workflows/ci.yml/badge.svg)](https://github.com/maku85/verba/actions/workflows/ci.yml)
 
+
+<p align="center">
+  <br>
+  <img src="./preview.png" width="600" />
+  <br>
+</p>
+
+Project demo is available <a href="http://www.maurocunsolo.com/verba">here</a>.
+
 ## Build Setup
 
 ```bash
