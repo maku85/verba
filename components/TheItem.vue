@@ -11,7 +11,7 @@
         [{{ item.pronunciation }}]
       </p>
       <p v-html="item.meaning"></p>
-      <div class="text-center text--disabled">{{ item.id }}/35</div>
+      <div class="text-center text--disabled">{{ item.id }}/40</div>
     </v-card-text>
   </v-card>
 </template>

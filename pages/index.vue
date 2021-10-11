@@ -35,7 +35,7 @@ export default {
       this.details = await this.$content('words', selectedItem.slug).fetch()
     },
     async fetchData(searchTerm = '') {
-      const numOfItems = 35
+      const numOfItems = 40
       const ids = []
       const whereConditions = {}
       if (!searchTerm) {
