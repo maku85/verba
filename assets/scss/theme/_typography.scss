@@ -1,6 +1,14 @@
+@font-face {
+  font-family: $font-family;
+  src: local('Inconsolata'),
+    url(~assets/fonts/Inconsolata.ttf) format('truetype');
+  font-display: swap;
+}
+
 * {
+  font-family: $font-family, sans-serif !important;
+
   [class*='text-'] {
     font-family: $font-family, sans-serif !important;
   }
-  font-family: $font-family, sans-serif !important;
 }

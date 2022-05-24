@@ -26,11 +26,7 @@ export default {
 
   components: true,
 
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/vuetify',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/vuetify'],
 
   modules: ['@nuxt/content', '@nuxtjs/pwa'],
 
@@ -42,12 +38,6 @@ export default {
       lang: 'it',
       useWebmanifestExtension: false,
       theme_color: '#e6ecee',
-    },
-  },
-
-  googleFonts: {
-    families: {
-      Inconsolata: true,
     },
   },
 

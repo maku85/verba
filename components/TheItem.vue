@@ -1,14 +1,14 @@
 <template>
   <v-card @click.stop="fetch(item)">
     <v-card-title
-      class="item-title pt-10 text-h4 font-weight-medium text-lowercase"
+      class="item-title pt-14 pb-0 text-h4 font-weight-medium text-lowercase"
     >
       {{ item.word }}
     </v-card-title>
 
     <v-card-text>
       <p class="font-italic font-weight-light text-lowercase">
-        [{{ item.pronunciation }}]
+        {{ item.pronunciation }}
       </p>
       <p v-html="item.meaning"></p>
       <div class="text-center text--disabled">{{ item.id }}/40</div>

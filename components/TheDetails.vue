@@ -1,13 +1,13 @@
 <template>
   <v-dialog v-model="dialog" width="600">
     <v-card>
-      <v-card-title class="item-title text-h4 text-lowercase pt-10">
+      <v-card-title class="item-title text-h4 pt-14 pb-0 text-lowercase pt-10">
         {{ item.word }}
       </v-card-title>
 
       <v-card-text>
         <p class="font-italic font-weight-light text-lowercase">
-          [{{ item.pronunciation }}]
+          {{ item.pronunciation }}
         </p>
         <p>
           <strong>Etimologia:</strong>
