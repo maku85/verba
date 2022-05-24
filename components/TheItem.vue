@@ -1,8 +1,6 @@
 <template>
   <v-card @click.stop="fetch(item)">
-    <v-card-title
-      class="item-title pt-14 pb-0 text-h4 font-weight-medium text-lowercase"
-    >
+    <v-card-title class="item-title pt-14 pb-0 text-h5 text-lowercase">
       {{ item.word }}
     </v-card-title>
 

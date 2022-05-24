@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog" width="600">
     <v-card>
-      <v-card-title class="item-title text-h4 pt-14 pb-0 text-lowercase pt-10">
+      <v-card-title class="item-title pt-14 pb-0 text-h5 text-lowercase">
         {{ item.word }}
       </v-card-title>
 
