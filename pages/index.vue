@@ -49,7 +49,6 @@ export default {
       const items = await this.$content('words')
         .where(whereConditions)
         .search(searchTerm)
-        .sortBy('date', 'desc')
         .limit(15)
         .fetch()
 

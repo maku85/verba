@@ -1,7 +1,10 @@
 <template>
   <v-card @click.stop="fetch(item)">
-    <v-card-title class="item-title pt-14 pb-0 text-h5 text-lowercase">
+    <v-card-title class="item-title pt-14 pb-0 text-h5 text-capitalize">
       {{ item.word }}
+      <v-btn fab small plain @click.stop="startTxtToSpeech(item.word)">
+        <v-icon>mdi-volume-medium</v-icon>
+      </v-btn>
     </v-card-title>
 
     <v-card-text>
@@ -20,6 +23,11 @@ export default {
   methods: {
     fetch(item) {
       this.$emit('fetch', item)
+    },
+    startTxtToSpeech(text) {
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.lang = 'it-IT'
+      window.speechSynthesis.speak(utterance)
     },
   },
 }
