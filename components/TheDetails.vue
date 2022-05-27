@@ -22,6 +22,10 @@
 
         <p v-html="item.meaning"></p>
 
+        <p v-if="item.examples">
+          <div v-for="example of item.examples" :key="example.id" class="example ml-4 font-italic">"{{example}}"</div>
+        </p>
+
         <v-divider
           v-if="item.details || item.synonyms || item.antonyms"
           class="pb-4"
@@ -77,6 +81,7 @@ export default {
   color: #444;
 }
 
+
 blockquote {
   margin: 0;
 
@@ -88,7 +93,7 @@ blockquote {
 }
 
 .etimology-bck {
-  background: #ddd;
+  border-left: 10px solid #ccc;
 }
 .curiosity-bck {
   background: #c9dcb3;
