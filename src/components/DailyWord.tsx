@@ -13,7 +13,7 @@ import wordsData from '../data/words.json';
 
 interface DailyWordProps {
   currentUser: User;
-  setCurrentUser: any
+  setCurrentUser: any;
   language: 'it' | 'en' | 'es' | 'fr';
 }
 
@@ -24,60 +24,58 @@ const DailyWord: React.FC<DailyWordProps> = ({
 }) => {
   const t = translations[language];
   const [dailyWord, setDailyWord] = useState<DailyWordType | null>(null);
-  const [hasLearnedDailyWord, setHasLearnedDailyWord] = useState(false);
   const words: Word[] = wordsData as Word[];
 
-  const initDailyWord = () => {
-    const today = new Date().toDateString();
+  const getTodayISO = () => new Date().toISOString().slice(0, 10);
 
+  const initDailyWord = () => {
+    const today = getTodayISO();
     const seed = today
       .split('')
       .reduce((acc, char) => acc + char.charCodeAt(0), 0);
     const wordIndex = seed % words.length;
-
     const dailyWord = {
       ...words[wordIndex],
       date: today,
       points: words[wordIndex].points + 5,
     };
-
     setDailyWord(dailyWord);
-
-    const dailyWordsLearned = currentUser.dailyWordsLearned || [];
-    setHasLearnedDailyWord(dailyWordsLearned.includes(today));
   };
+
+  const [hasLearnedDailyWord, setHasLearnedDailyWord] = useState(false);
 
   const learnDailyWord = () => {
     if (!dailyWord || hasLearnedDailyWord) return;
 
-    const today = new Date().toDateString();
-    const newLearnedWords = [...(currentUser.dailyWordsLearned || []), today];
-
+    const newLearnedWords = [
+      ...(currentUser.dailyWordsLearned || []),
+      dailyWord.id,
+    ];
     const dailyWordXP = dailyWord.points + 5;
+    const newExperience = currentUser.experience + dailyWordXP;
+    const { level, levelProgress } = calculateLevelAndProgress(newExperience);
 
     setCurrentUser((prev: User) => ({
       ...prev,
       points: prev.points + dailyWord.points,
       dailyWordsLearned: newLearnedWords,
-      experience: prev.experience + dailyWordXP,
+      experience: newExperience,
       totalWordsLearned: prev.totalWordsLearned + 1,
-    }));
-
-    const newExperience = currentUser.experience + dailyWordXP;
-    const { level, levelProgress } = calculateLevelAndProgress(newExperience);
-    
-    setCurrentUser((prev: User) => ({
-      ...prev,
       level,
       levelProgress,
     }));
-
     setHasLearnedDailyWord(true);
   };
 
   useEffect(() => {
     initDailyWord();
-  }, []);
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (!dailyWord) return;
+    const dailyWordsLearned = currentUser.dailyWordsLearned || [];
+    setHasLearnedDailyWord(dailyWordsLearned.includes(dailyWord.id));
+  }, [currentUser, dailyWord]);
 
   if (!dailyWord) return null;
 
@@ -113,6 +111,14 @@ const DailyWord: React.FC<DailyWordProps> = ({
             </span>
           </div>
           <p className="text-base md:text-xl text-white/90 mb-4 leading-relaxed">
+            <div className="example">
+              <strong>Esempio d'uso:</strong> {dailyWord.example}
+            </div>
+            {dailyWord.curiosity && (
+              <div className="curiosity">
+                <strong>Curiosità:</strong> {dailyWord.curiosity}
+              </div>
+            )}
             <strong>{t.definition}:</strong> {dailyWord.definition}
           </p>
           <p className="text-base md:text-lg text-white/80 mb-4">
@@ -139,4 +145,4 @@ const DailyWord: React.FC<DailyWordProps> = ({
   );
 };
 
-export default DailyWord; 
+export default DailyWord;

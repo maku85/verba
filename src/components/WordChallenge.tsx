@@ -7,6 +7,10 @@ import {
   getCurrentTitle,
   getHint,
 } from '../utils/gameHelpers';
+import {
+  saveToLocalStorage,
+  loadFromLocalStorage,
+} from '../utils/localStorage';
 import { titles } from '../data/gameConfig';
 import { translations } from '../data/translations';
 import { User } from '../types/user';
@@ -23,6 +27,7 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
   language,
 }) => {
   const t = translations[language];
+  const [user, setUser] = useState<User | null>(null);
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState('');
@@ -33,6 +38,21 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
   const [shake, setShake] = useState(false);
 
   const words: Word[] = wordsData as Word[];
+
+  useEffect(() => {
+    const storedUser = loadFromLocalStorage<User>('currentUser');
+    if (storedUser) {
+      setUser(storedUser);
+      setCurrentUser(storedUser);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (user) {
+      saveToLocalStorage<User>('currentUser', user);
+      setCurrentUser(user);
+    }
+  }, [user]);
 
   const chooseNewWord = useCallback(() => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
@@ -47,10 +67,11 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
   }, [words]);
 
   const updateUserWithXP = (xpGained: number) => {
-    setCurrentUser((prev: User) => {
+    setUser((prev) => {
+      if (!prev) return prev;
+
       const newExperience = prev.experience + xpGained;
       const { level, levelProgress } = calculateLevelAndProgress(newExperience);
-      
       return {
         ...prev,
         experience: newExperience,
@@ -69,9 +90,9 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
 
     if (rightAnswer) {
       const xpGained = calculateXP(currentWord, hintsUsed);
-      
+
       updateUserWithXP(xpGained);
-      
+
       setCurrentUser((prev: User) => ({
         ...prev,
         points: prev.points + currentWord.points,
@@ -79,7 +100,7 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
       }));
 
       setIsCorrect(true);
-      
+
       setFeedback(
         `🎉 Corretto! +${currentWord.points} punti, +${xpGained} XP!`
       );
@@ -102,7 +123,7 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
       setShowHint(true);
       setCurrentUser((prev: User) => ({
         ...prev,
-        points: Math.max(0, prev.points - 2)
+        points: Math.max(0, prev.points - 2),
       }));
     }
   };
@@ -111,27 +132,25 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
     if (!currentWord) chooseNewWord();
   }, []);
 
-  if(!currentWord) return null;
+  if (!currentWord) return null;
 
   return (
     <div className="bg-gradient-to-br from-slate-800 to-slate-900 backdrop-blur-lg rounded-3xl shadow-2xl p-10 mb-12 border border-slate-700">
-              <div className="text-center mb-8">
-          <h2 className="text-4xl font-black text-white mb-3">
-            {t.wordChallenge}
-          </h2>
-          <p className="text-xl text-slate-300">
-            {t.challengeDescription}
-          </p>
-        </div>
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-black text-white mb-3">
+          {t.wordChallenge}
+        </h2>
+        <p className="text-xl text-slate-300">{t.challengeDescription}</p>
+      </div>
 
       {!showDefinition && (
         <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 mb-8 border border-purple-500/20">
           <div className="flex items-center justify-end">
             <div className="flex items-center gap-3 bg-purple-500/20 backdrop-blur-lg px-4 py-2 rounded-xl">
               <Gem className="text-purple-300" size={20} />
-                          <span className="font-bold text-purple-300">
-              {currentWord.points} {t.points}
-            </span>
+              <span className="font-bold text-purple-300">
+                {currentWord.points} {t.points}
+              </span>
             </div>
           </div>
 
@@ -155,9 +174,11 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
                 onChange={(e) => setAnswer(e.target.value)}
                 placeholder={t.writeWordHere}
                 className={`w-full p-6 bg-slate-700 border-2 rounded-2xl text-xl text-white placeholder-slate-400 focus:outline-none transition-all duration-300 ${
-                  shake ? 'animate-bounce border-red-500' : 
-                  isCorrect ? 'border-emerald-500' : 
-                  'border-slate-600 focus:border-purple-500'
+                  shake
+                    ? 'animate-bounce border-red-500'
+                    : isCorrect
+                    ? 'border-emerald-500'
+                    : 'border-slate-600 focus:border-purple-500'
                 }`}
                 onKeyPress={(e) => e.key === 'Enter' && verifyAnswer()}
               />
@@ -174,8 +195,8 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
                 onClick={useHint}
                 disabled={hintsUsed >= 3}
                 className={`px-6 py-4 border-2 rounded-2xl font-bold text-lg transition-all duration-300 ${
-                  hintsUsed >= 3 
-                    ? 'border-slate-500 text-slate-400 opacity-50 cursor-not-allowed' 
+                  hintsUsed >= 3
+                    ? 'border-slate-500 text-slate-400 opacity-50 cursor-not-allowed'
                     : 'border-amber-500 text-amber-400 hover:bg-amber-500/10 hover:scale-105'
                 }`}
               >
@@ -195,7 +216,9 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
                   <span className="text-2xl animate-pulse">💡</span>
                   <h4 className="text-lg font-bold text-amber-300">{t.hint}</h4>
                 </div>
-                <p className="text-amber-200 text-lg">{getHint(currentWord.word, hintsUsed)}</p>
+                <p className="text-amber-200 text-lg">
+                  {getHint(currentWord.word, hintsUsed)}
+                </p>
                 <p className="text-amber-300 text-sm mt-2">
                   ⚠️ {t.hintPenalty}
                 </p>
@@ -240,4 +263,4 @@ const WordChallenge: React.FC<WordChallengeProps> = ({
   );
 };
 
-export default WordChallenge; 
+export default WordChallenge;

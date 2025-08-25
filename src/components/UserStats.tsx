@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Crown, Trophy, Target, Star } from 'lucide-react';
+
+import {
+  saveToLocalStorage,
+  loadFromLocalStorage,
+} from '../utils/localStorage';
 import { translations } from '../data/translations';
 
 interface UserStatsProps {
@@ -29,6 +34,21 @@ interface UserStatsProps {
 
 const UserStats: React.FC<UserStatsProps> = ({ currentUser, language }) => {
   const t = translations[language];
+  const [user, setUser] = useState(currentUser);
+
+  useEffect(() => {
+    const storedUser = loadFromLocalStorage<typeof currentUser>('currentUser');
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (user) {
+      saveToLocalStorage<typeof currentUser>('currentUser', user);
+    }
+  }, [user]);
+
   return (
     <div className="bg-gradient-to-br from-slate-800 to-slate-900 backdrop-blur-lg rounded-3xl shadow-2xl p-8 mb-12 border border-slate-700">
       <div className="flex items-center justify-between mb-8">
@@ -37,11 +57,9 @@ const UserStats: React.FC<UserStatsProps> = ({ currentUser, language }) => {
             <Crown className="text-white" size={28} />
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-white">
-              {currentUser.name}
-            </span>
+            <span className="text-3xl font-bold text-white">{user.name}</span>
             <div className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold mt-2 inline-block">
-              {currentUser.title}
+              {user.title}
             </div>
           </div>
         </div>
@@ -49,18 +67,24 @@ const UserStats: React.FC<UserStatsProps> = ({ currentUser, language }) => {
 
       <div className="mb-6 bg-slate-700/50 backdrop-blur-lg rounded-2xl p-4 border border-slate-600">
         <div className="flex items-center justify-between mb-3">
-          <span className="text-lg font-bold text-white">{t.level} {currentUser.level}</span>
-          <span className="text-sm text-slate-300">{currentUser.experience} XP</span>
+          <span className="text-lg font-bold text-white">
+            {t.level} {user.level}
+          </span>
+          <span className="text-sm text-slate-300">{user.experience} XP</span>
         </div>
         <div className="w-full bg-slate-600 rounded-full h-3">
-          <div 
+          <div
             className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${currentUser.levelProgress}%` }}
+            style={{ width: `${user.levelProgress}%` }}
           ></div>
         </div>
         <div className="flex justify-between text-xs text-slate-400 mt-2">
-          <span>{t.level} {currentUser.level}</span>
-          <span>{t.level} {currentUser.level + 1}</span>
+          <span>
+            {t.level} {currentUser.level}
+          </span>
+          <span>
+            {t.level} {currentUser.level + 1}
+          </span>
         </div>
       </div>
 
@@ -70,7 +94,9 @@ const UserStats: React.FC<UserStatsProps> = ({ currentUser, language }) => {
           <div className="text-2xl sm:text-3xl font-black text-white">
             {currentUser.points}
           </div>
-          <div className="text-sm sm:text-base text-blue-100 font-semibold">{t.points}</div>
+          <div className="text-sm sm:text-base text-blue-100 font-semibold">
+            {t.points}
+          </div>
         </div>
         <div className="flex-1 bg-gradient-to-br from-emerald-500 to-teal-600 p-6 rounded-2xl text-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
           <Target className="mx-auto text-white mb-3" size={32} />
@@ -86,11 +112,13 @@ const UserStats: React.FC<UserStatsProps> = ({ currentUser, language }) => {
           <div className="text-2xl sm:text-3xl font-black text-white">
             {currentUser.experience}
           </div>
-          <div className="text-sm sm:text-base text-yellow-100 font-semibold">{t.totalXP}</div>
+          <div className="text-sm sm:text-base text-yellow-100 font-semibold">
+            {t.totalXP}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default UserStats; 
+export default UserStats;

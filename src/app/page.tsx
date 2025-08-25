@@ -18,33 +18,48 @@ const App = () => {
     totalWordsLearned: 0,
     title: 'Novizio delle Parole',
     dailyWordsLearned: [] as string[],
+    hasLearnedDailyWord: false,
   });
+  const [isUserLoaded, setIsUserLoaded] = useState(false);
 
-  const [isOnline, setIsOnline] = useState(navigator.onLine);  
+  const setCurrentUserAndSave = (update: any) => {
+    setCurrentUser((prev: any) => {
+      const newUser = typeof update === 'function' ? update(prev) : update;
+      localStorage.setItem('verbaUser', JSON.stringify(newUser));
+      return newUser;
+    });
+  };
+
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('verbaUser');
     if (savedUser) {
       setCurrentUser(JSON.parse(savedUser));
     }
+    setIsUserLoaded(true);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('verbaUser', JSON.stringify(currentUser));
-  }, [currentUser]);
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
-    
+
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-    
+
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
+
+  if (!isUserLoaded) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-white text-xl">
+        Caricamento...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 relative overflow-hidden">
@@ -55,18 +70,27 @@ const App = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10 my-8">
-        <Header title="Parole Preziose" subtitle="Scopri il tesoro nascosto dell'italiano" />
+        <Header
+          title="Parole Preziose"
+          subtitle="Scopri il tesoro nascosto dell'italiano"
+        />
+
+        <div className="mb-6 flex justify-end">
+          <a
+            href="/learned-words"
+            className="px-4 py-2 bg-purple-600 text-white rounded-xl font-bold shadow hover:bg-purple-700 transition"
+          >
+            Parole imparate
+          </a>
+        </div>
 
         <DailyWordComponent
           currentUser={currentUser}
-          setCurrentUser={setCurrentUser}
+          setCurrentUser={setCurrentUserAndSave}
           language="it"
         />
 
-        <WordChallenge
-          setCurrentUser={setCurrentUser}
-          language="it"
-        />
+        <WordChallenge setCurrentUser={setCurrentUserAndSave} language="it" />
 
         <UserStats currentUser={currentUser} language="it" />
       </div>
