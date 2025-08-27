@@ -21,6 +21,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Setup node env 🏗
         uses: actions/setup-node@v4
         with:
@@ -37,9 +40,6 @@ jobs:
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
-
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Install dependencies 👨🏻‍💻
         run: pnpm install --prefer-offline
