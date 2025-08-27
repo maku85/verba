@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node: [22]
 
     steps:
       - name: Checkout 🛎
@@ -27,25 +27,33 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.4
+      - name: Cache pnpm store 📦
+        uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-pnpm-
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
+        run: pnpm install --prefer-offline
 
       - name: Run linter 👀
-        run: npm run lint
+        run: pnpm lint
 
-      - name: Generate
-        run: npm run generate
+
+
+      - name: Build Next.js
+        run: pnpm build
+
+      - name: Export static site
+        run: pnpm export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./out

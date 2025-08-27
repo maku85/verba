@@ -1,38 +1,31 @@
 {
   "name": "verba",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "prepare": "husky install",
-    "lint": "npm run lint:js"
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "validate-words": "node scripts/manage-words.js validate",
+    "words-help": "node scripts/manage-words.js help"
   },
   "dependencies": {
-    "@nuxt/content": "^1.15.1",
-    "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.22.7",
-    "nuxt": "^2.15.8",
-    "vue-masonry-css": "^1.0.3",
-    "vuetify": "^2.6.6"
+    "lucide-react": "^0.511.0",
+    "next": "15.3.2",
+    "next-intl": "^4.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
-    "@nuxtjs/eslint-config": "^10.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
-    "@nuxtjs/vuetify": "^1.12.3",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^3.2.0",
-    "eslint-plugin-vue": "^9.0.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^12.4.2",
-    "prettier": "^2.6.2"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

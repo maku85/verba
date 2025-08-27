@@ -1,0 +1,589 @@
+[
+  {
+    "id": "1",
+    "word": "Baluginare",
+    "definition": "Apparire improvvisamente e per breve tempo, come un bagliore",
+    "example": "Le stelle iniziarono a baluginare nel cielo notturno",
+    "category": "Verbo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Deriva dal latino 'baluginare', usato per descrivere bagliori fugaci."
+  },
+  {
+    "id": "2",
+    "word": "Vellicare",
+    "definition": "Solleticare leggermente",
+    "example": "Il vento primaverile vellicava dolcemente il viso",
+    "category": "Verbo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Usato anche in medicina per indicare stimolazioni leggere della pelle."
+  },
+  {
+    "id": "3",
+    "word": "Sdrucire",
+    "definition": "Scucire, strappare una cucitura",
+    "example": "Il vestito si è sdrucito lungo la cucitura laterale",
+    "category": "Verbo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Parola tipica del linguaggio sartoriale italiano."
+  },
+  {
+    "id": "4",
+    "word": "Perigliare",
+    "definition": "Essere in pericolo, rischiare",
+    "example": "La nave periglió durante la tempesta",
+    "category": "Verbo",
+    "difficulty": 3,
+    "points": 20
+  },
+  {
+    "id": "5",
+    "word": "Lucignolo",
+    "definition": "Stoppino di una candela o lampada",
+    "example": "Il lucignolo della candela tremolava nella corrente",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": "6",
+    "word": "Blandire",
+    "definition": "Lusingare con parole gentili",
+    "example": "Cercò di blandire il cliente con complimenti",
+    "category": "Verbo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": "7",
+    "word": "Consunto",
+    "definition": "Consumato, logoro dall'uso",
+    "example": "Il libro consunto mostrava i segni di molte letture",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": "8",
+    "word": "Procrastinare",
+    "definition": "Rimandare continuamente",
+    "example": "Non bisogna procrastinare le decisioni importanti",
+    "category": "Verbo",
+    "difficulty": 1,
+    "points": 10
+  },
+  {
+    "id": "9",
+    "word": "Serendipità",
+    "definition": "Scoperta fortuita di qualcosa di prezioso mentre si cerca altro",
+    "example": "La scoperta della penicillina fu un caso di serendipità",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20
+  },
+  {
+    "id": 10,
+    "word": "Melifluo",
+    "definition": "Dolce come il miele, particolarmente nel parlare",
+    "example": "Il suo discorso melifluo conquistò tutti i presenti",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": 11,
+    "word": "Ubiquo",
+    "definition": "Presente ovunque, onnipresente",
+    "example": "I social media sono diventati ubiqui nella nostra vita",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": 12,
+    "word": "Evanescente",
+    "definition": "Che svanisce rapidamente, fugace",
+    "example": "Il ricordo di quel momento fu evanescente",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20
+  },
+  {
+    "id": 13,
+    "word": "Serendipità",
+    "definition": "Scoperta fortuita di qualcosa di prezioso mentre si cerca altro",
+    "example": "La scoperta della penicillina fu un caso di serendipità",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20
+  },
+  {
+    "id": 14,
+    "word": "Melifluo",
+    "definition": "Dolce come il miele, particolarmente nel parlare",
+    "example": "Il suo discorso melifluo conquistò tutti i presenti",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": 15,
+    "word": "Ubiquo",
+    "definition": "Presente ovunque, onnipresente",
+    "example": "I social media sono diventati ubiqui nella nostra vita",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15
+  },
+  {
+    "id": 16,
+    "word": "Evanescente",
+    "definition": "Che svanisce rapidamente, fugace",
+    "example": "Il ricordo di quel momento fu evanescente",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20
+  },
+  {
+    "id": 17,
+    "word": "Atarassia",
+    "definition": "Imperturbabilità dell'animo, serenità assoluta",
+    "example": "Raggiunse l'atarassia dopo anni di meditazione",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Termine filosofico di origine greca, usato dagli stoici."
+  },
+  {
+    "id": 18,
+    "word": "Onusto",
+    "definition": "Carico, gravato di peso",
+    "example": "Il carro era onusto di mercanzie",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'onustus', usato spesso in poesia."
+  },
+  {
+    "id": 19,
+    "word": "Sussiego",
+    "definition": "Comportamento altezzoso, distaccato",
+    "example": "Rispose con sussiego alle domande dell'intervistatore",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Parola usata per descrivere atteggiamenti di superiorità."
+  },
+  {
+    "id": 20,
+    "word": "Languore",
+    "definition": "Stato di debolezza fisica o malinconia",
+    "example": "Un languore autunnale pervadeva la città",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Usato spesso in letteratura per descrivere atmosfere malinconiche."
+  },
+  {
+    "id": 21,
+    "word": "Ammennicolo",
+    "definition": "Oggetto di poco valore, accessorio superfluo",
+    "example": "La scrivania era piena di ammennicoli inutili",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Parola usata per indicare oggetti di scarsa importanza."
+  },
+  {
+    "id": 22,
+    "word": "Bislacco",
+    "definition": "Strano, bizzarro, fuori dal comune",
+    "example": "Ha sempre avuto idee bislacche",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal dialetto lombardo, indica stranezza."
+  },
+  {
+    "id": 23,
+    "word": "Cacofonia",
+    "definition": "Sgradevole combinazione di suoni",
+    "example": "La cacofonia del traffico cittadino era assordante",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal greco, usato in musica e linguistica."
+  },
+  {
+    "id": 24,
+    "word": "Didascalico",
+    "definition": "Che ha scopo di insegnare, istruttivo",
+    "example": "Il suo tono era troppo didascalico",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Usato per testi o discorsi educativi."
+  },
+  {
+    "id": 25,
+    "word": "Eteroclito",
+    "definition": "Diverso dalla norma, irregolare",
+    "example": "Un comportamento eteroclito rispetto al gruppo",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal greco, usato in grammatica e filosofia."
+  },
+  {
+    "id": 26,
+    "word": "Farraginoso",
+    "definition": "Confuso, disordinato, difficile da seguire",
+    "example": "Un discorso farraginoso e poco chiaro",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'farrago', miscuglio."
+  },
+  {
+    "id": 27,
+    "word": "Garrulo",
+    "definition": "Che parla molto, chiacchierone",
+    "example": "Un collega garrulo e sempre allegro",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino, usato anche per uccelli canterini."
+  },
+  {
+    "id": 28,
+    "word": "Iperboreo",
+    "definition": "Relativo alle regioni del nord estremo",
+    "example": "Le leggende iperboree affascinano gli studiosi",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal greco, usato in mitologia."
+  },
+  {
+    "id": 29,
+    "word": "Lacustre",
+    "definition": "Relativo ai laghi",
+    "example": "La fauna lacustre è molto varia",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'lacus', usato in geografia."
+  },
+  {
+    "id": 30,
+    "word": "Mellifluo",
+    "definition": "Che scorre dolcemente, come il miele",
+    "example": "Un canto mellifluo e rilassante",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Simile a melifluo, usato in poesia."
+  },
+  {
+    "id": 31,
+    "word": "Nefando",
+    "definition": "Che suscita orrore, abominevole",
+    "example": "Un crimine nefando e crudele",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal latino, usato in diritto e letteratura."
+  },
+  {
+    "id": 32,
+    "word": "Onirico",
+    "definition": "Relativo ai sogni",
+    "example": "Un racconto onirico e surreale",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal greco 'oneiros', sogno."
+  },
+  {
+    "id": 33,
+    "word": "Peregrino",
+    "definition": "Strano, insolito; anche viaggiatore",
+    "example": "Un'idea peregrina ma interessante",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino, usato anche per viaggiatori."
+  },
+  {
+    "id": 34,
+    "word": "Quisquilia",
+    "definition": "Cosa di poco conto, sciocchezza",
+    "example": "Non preoccuparti di queste quisquilie",
+    "category": "Sostantivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino, usato per indicare cose trascurabili."
+  },
+  {
+    "id": 35,
+    "word": "Rocambolesco",
+    "definition": "Avventuroso, pieno di colpi di scena",
+    "example": "Un viaggio rocambolesco attraverso l'Europa",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal personaggio Rocambole, romanzi d'avventura."
+  },
+  {
+    "id": 36,
+    "word": "Sovente",
+    "definition": "Spesso, frequentemente",
+    "example": "Sovente si dimentica di chiudere la porta",
+    "category": "Avverbio",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Parola letteraria, usata in poesia."
+  },
+  {
+    "id": 37,
+    "word": "Tracotanza",
+    "definition": "Arroganza, superbia eccessiva",
+    "example": "La sua tracotanza era insopportabile",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino, usato in letteratura."
+  },
+  {
+    "id": 38,
+    "word": "Ulpiano",
+    "definition": "Persona saggia, dotta (raro)",
+    "example": "Un ulpiano del quartiere, sempre pronto a consigliare",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal nome di un giurista romano."
+  },
+  {
+    "id": 39,
+    "word": "Vaghezza",
+    "definition": "Desiderio confuso, sogno indefinito",
+    "example": "Aveva una vaghezza di viaggiare lontano",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Usato in poesia e letteratura."
+  },
+  {
+    "id": 40,
+    "word": "Zelante",
+    "definition": "Che mostra zelo, molto impegnato",
+    "example": "Un lavoratore zelante e preciso",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'zelans', usato in ambito religioso."
+  },
+  {
+    "id": 41,
+    "word": "Abulico",
+    "definition": "Privo di volontà, indifferente",
+    "example": "Un atteggiamento abulico verso la vita",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal greco 'aboulia', mancanza di volontà."
+  },
+  {
+    "id": 42,
+    "word": "Baldanzoso",
+    "definition": "Che mostra sicurezza e allegria",
+    "example": "Entrò baldanzoso nella stanza",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'baldanza', usato in letteratura."
+  },
+  {
+    "id": 43,
+    "word": "Catafratto",
+    "definition": "Coperto da una corazza, protetto",
+    "example": "Il cavaliere catafratto avanzava impavido",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal greco, usato per antichi guerrieri."
+  },
+  {
+    "id": 44,
+    "word": "Diuturno",
+    "definition": "Che dura a lungo, persistente",
+    "example": "Un amore diuturno e fedele",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'diuturnus', usato in poesia."
+  },
+  {
+    "id": 45,
+    "word": "Eufonico",
+    "definition": "Gradevole all'orecchio, armonioso",
+    "example": "Un nome eufonico e facile da ricordare",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal greco, usato in musica e linguistica."
+  },
+  {
+    "id": 46,
+    "word": "Fulgido",
+    "definition": "Splendente, luminoso",
+    "example": "Un futuro fulgido e promettente",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'fulgidus', usato in poesia."
+  },
+  {
+    "id": 47,
+    "word": "Gnomico",
+    "definition": "Che esprime una massima, sentenza",
+    "example": "Un discorso gnomico e ricco di aforismi",
+    "category": "Aggettivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal greco 'gnome', usato in letteratura."
+  },
+  {
+    "id": 48,
+    "word": "Ineluttabile",
+    "definition": "Che non si può evitare, inevitabile",
+    "example": "Un destino ineluttabile",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino, usato in filosofia."
+  },
+  {
+    "id": 49,
+    "word": "Laconico",
+    "definition": "Conciso, breve nel parlare",
+    "example": "Rispose in modo laconico",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal popolo dei Lacedemoni, noti per la brevità."
+  },
+  {
+    "id": 50,
+    "word": "Mansueto",
+    "definition": "Docile, tranquillo",
+    "example": "Un animale mansueto e gentile",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'mansuetus', usato per animali e persone."
+  },
+  {
+    "id": 51,
+    "word": "Nugolo",
+    "definition": "Gruppo numeroso, folla",
+    "example": "Un nugolo di bambini giocava nel parco",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'nucleus', usato per nuvole o gruppi."
+  },
+  {
+    "id": 52,
+    "word": "Obnubilare",
+    "definition": "Offuscare, rendere oscuro",
+    "example": "La stanchezza obnubilava la sua mente",
+    "category": "Verbo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal latino 'obnubilare', usato in medicina e letteratura."
+  },
+  {
+    "id": 53,
+    "word": "Peregrinazione",
+    "definition": "Viaggio lungo e avventuroso",
+    "example": "La sua peregrinazione durò molti anni",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal latino 'peregrinatio', usato per viaggi spirituali."
+  },
+  {
+    "id": 54,
+    "word": "Quotidiano",
+    "definition": "Che avviene ogni giorno, consueto",
+    "example": "La routine quotidiana può essere rassicurante",
+    "category": "Aggettivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'quotidianus', usato in letteratura."
+  },
+  {
+    "id": 55,
+    "word": "Rutilante",
+    "definition": "Splendente, che brilla vivacemente",
+    "example": "Un abito rutilante di paillettes",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'rutilans', usato in poesia."
+  },
+  {
+    "id": 56,
+    "word": "Sibilo",
+    "definition": "Suono acuto e prolungato",
+    "example": "Il sibilo del vento tra le finestre",
+    "category": "Sostantivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal latino 'sibilus', usato per suoni naturali."
+  },
+  {
+    "id": 57,
+    "word": "Taciturno",
+    "definition": "Che parla poco, silenzioso",
+    "example": "Un uomo taciturno e riservato",
+    "category": "Aggettivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'tacitus', usato per caratteri chiusi."
+  },
+  {
+    "id": 58,
+    "word": "Ulpiano",
+    "definition": "Persona saggia, dotta (raro)",
+    "example": "Un ulpiano del quartiere, sempre pronto a consigliare",
+    "category": "Sostantivo",
+    "difficulty": 3,
+    "points": 20,
+    "curiosity": "Dal nome di un giurista romano."
+  },
+  {
+    "id": 59,
+    "word": "Velleità",
+    "definition": "Desiderio debole, aspirazione non realizzata",
+    "example": "Aveva molte velleità artistiche",
+    "category": "Sostantivo",
+    "difficulty": 2,
+    "points": 15,
+    "curiosity": "Dal latino 'velleitas', usato in psicologia."
+  },
+  {
+    "id": 60,
+    "word": "Zefiro",
+    "definition": "Vento leggero e piacevole",
+    "example": "Un zefiro primaverile accarezzava il viso",
+    "category": "Sostantivo",
+    "difficulty": 1,
+    "points": 10,
+    "curiosity": "Dal greco, personificazione del vento dell'ovest."
+  }
+]
