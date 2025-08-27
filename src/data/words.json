@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "word": "Baluginare",
     "definition": "Apparire improvvisamente e per breve tempo, come un bagliore",
     "example": "Le stelle iniziarono a baluginare nel cielo notturno",
@@ -10,7 +10,7 @@
     "curiosity": "Deriva dal latino 'baluginare', usato per descrivere bagliori fugaci."
   },
   {
-    "id": 2,
+    "id": "2",
     "word": "Vellicare",
     "definition": "Solleticare leggermente",
     "example": "Il vento primaverile vellicava dolcemente il viso",
@@ -20,7 +20,7 @@
     "curiosity": "Usato anche in medicina per indicare stimolazioni leggere della pelle."
   },
   {
-    "id": 3,
+    "id": "3",
     "word": "Sdrucire",
     "definition": "Scucire, strappare una cucitura",
     "example": "Il vestito si è sdrucito lungo la cucitura laterale",
@@ -30,7 +30,7 @@
     "curiosity": "Parola tipica del linguaggio sartoriale italiano."
   },
   {
-    "id": 4,
+    "id": "4",
     "word": "Perigliare",
     "definition": "Essere in pericolo, rischiare",
     "example": "La nave periglió durante la tempesta",
@@ -39,7 +39,7 @@
     "points": 20
   },
   {
-    "id": 5,
+    "id": "5",
     "word": "Lucignolo",
     "definition": "Stoppino di una candela o lampada",
     "example": "Il lucignolo della candela tremolava nella corrente",
@@ -48,7 +48,7 @@
     "points": 15
   },
   {
-    "id": 6,
+    "id": "6",
     "word": "Blandire",
     "definition": "Lusingare con parole gentili",
     "example": "Cercò di blandire il cliente con complimenti",
@@ -57,7 +57,7 @@
     "points": 15
   },
   {
-    "id": 7,
+    "id": "7",
     "word": "Consunto",
     "definition": "Consumato, logoro dall'uso",
     "example": "Il libro consunto mostrava i segni di molte letture",
@@ -66,7 +66,7 @@
     "points": 15
   },
   {
-    "id": 8,
+    "id": "8",
     "word": "Procrastinare",
     "definition": "Rimandare continuamente",
     "example": "Non bisogna procrastinare le decisioni importanti",
@@ -75,7 +75,7 @@
     "points": 10
   },
   {
-    "id": 9,
+    "id": "9",
     "word": "Serendipità",
     "definition": "Scoperta fortuita di qualcosa di prezioso mentre si cerca altro",
     "example": "La scoperta della penicillina fu un caso di serendipità",

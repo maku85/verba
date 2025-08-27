@@ -1,25 +1,16 @@
-import { useState, useEffect } from 'react';
-import { translations } from '../data/translations';
+import { useLocale, useTranslations as useIntlTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
-export type Language = 'it' | 'en' | 'es' | 'fr';
+export type Language = 'it' | 'en';
 
 export const useTranslations = () => {
-  const [language, setLanguage] = useState<Language>('it');
-
-  useEffect(() => {
-    // Carica la lingua salvata dal localStorage
-    const savedLanguage = localStorage.getItem('verbaLanguage') as Language;
-    if (savedLanguage && translations[savedLanguage]) {
-      setLanguage(savedLanguage);
-    }
-  }, []);
-
+  const locale = useLocale() as Language;
+  const t = useIntlTranslations();
+  const router = useRouter();
   const changeLanguage = (newLanguage: Language) => {
-    setLanguage(newLanguage);
+    router.push(`/${newLanguage}`);
     localStorage.setItem('verbaLanguage', newLanguage);
   };
 
-  const t = translations[language];
-
-  return { language, changeLanguage, t };
-}; 
+  return { language: locale, changeLanguage, t };
+};

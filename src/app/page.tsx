@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
-import Header from '@/components/Header';
 import DailyWordComponent from '@/components/DailyWord';
-import WordChallenge from '@/components/WordChallenge';
+import Header from '@/components/Header';
 import OfflineIndicator from '@/components/OfflineIndicator';
 import UserStats from '@/components/UserStats';
+import WordChallenge from '@/components/WordChallenge';
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState({
@@ -20,24 +21,22 @@ const App = () => {
     dailyWordsLearned: [] as string[],
     hasLearnedDailyWord: false,
   });
-  const [isUserLoaded, setIsUserLoaded] = useState(false);
 
-  const setCurrentUserAndSave = (update: any) => {
-    setCurrentUser((prev: any) => {
-      const newUser = typeof update === 'function' ? update(prev) : update;
-      localStorage.setItem('verbaUser', JSON.stringify(newUser));
-      return newUser;
-    });
+  const setCurrentUserAndSave = (update: typeof currentUser) => {
+    setCurrentUser(update);
+    localStorage.setItem('verbaUser', JSON.stringify(update));
   };
 
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('verbaUser');
-    if (savedUser) {
-      setCurrentUser(JSON.parse(savedUser));
-    }
-    setIsUserLoaded(true);
+    if (savedUser) setCurrentUser(JSON.parse(savedUser));
   }, []);
 
   useEffect(() => {
@@ -53,14 +52,6 @@ const App = () => {
     };
   }, []);
 
-  if (!isUserLoaded) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-white text-xl">
-        Caricamento...
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -70,32 +61,31 @@ const App = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10 my-8">
-        <Header
-          title="Parole Preziose"
-          subtitle="Scopri il tesoro nascosto dell'italiano"
-        />
+        <Header />
 
         <div className="mb-6 flex justify-end">
-          <a
+          <Link
             href="/learned-words"
             className="px-4 py-2 bg-purple-600 text-white rounded-xl font-bold shadow hover:bg-purple-700 transition"
           >
             Parole imparate
-          </a>
+          </Link>
         </div>
 
         <DailyWordComponent
           currentUser={currentUser}
           setCurrentUser={setCurrentUserAndSave}
-          language="it"
         />
 
-        <WordChallenge setCurrentUser={setCurrentUserAndSave} language="it" />
+        <WordChallenge
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUserAndSave}
+        />
 
-        <UserStats currentUser={currentUser} language="it" />
+        <UserStats currentUser={currentUser} />
       </div>
 
-      <OfflineIndicator isOnline={isOnline} />
+      {hasMounted && <OfflineIndicator isOnline={isOnline} />}
     </div>
   );
 };

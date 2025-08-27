@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import wordsData from '../data/words.json';
+import { useTranslations } from '../hooks/useTranslations';
 import { Word } from '../types/word';
 
 interface LearnedWordsProps {
@@ -21,22 +22,25 @@ const LearnedWords: React.FC<LearnedWordsProps> = ({ learnedIds }) => {
         word.curiosity.toLowerCase().includes(search.toLowerCase()))
   );
 
+  const { t } = useTranslations();
   if (learnedWords.length === 0) {
     return (
       <div className="text-center text-slate-400 py-8">
-        Non hai ancora imparato nessuna parola.
+        {t('noLearnedWords')}
       </div>
     );
   }
 
   return (
     <div className="max-w-6xl mx-auto my-8 p-6 bg-white/10 rounded-2xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-white">Parole Imparate</h2>
+      <h2 className="text-2xl font-bold mb-6 text-white">
+        {t('wordsDiscovered')}
+      </h2>
       <input
         type="text"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        placeholder="Cerca tra le parole..."
+        placeholder={t('filterWords')}
         className="w-full mb-6 px-4 py-2 rounded-xl border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
       />
       <ul className="space-y-4">
