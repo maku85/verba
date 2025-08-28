@@ -1,31 +1,66 @@
-# verba
+# Verba
 
 [![ci](https://github.com/maku85/verba/actions/workflows/ci.yml/badge.svg)](https://github.com/maku85/verba/actions/workflows/ci.yml)
 
+Project demo is available <a href="https://maku85.github.io/verba/">here</a>.
 
-<p align="center">
-  <br>
-  <img src="./preview.png" width="600" />
-  <br>
-</p>
+## Overview
 
-Project demo is available <a href="http://www.maurocunsolo.com/verba">here</a>.
+Verba is a Next.js app for discovering and learning Italian words, with daily challenges, gamification, and multilingual support.
 
-## Build Setup
+- **Framework:** Next.js (App Router, TypeScript)
+- **Styling:** Tailwind CSS
+- **i18n:** next-intl (with dynamic language switching)
+- **State:** React Context for language, localStorage for user progress
+- **Build:** pnpm
+- **Deployment:** GitHub Pages (static export)
+- **PWA:** Manifest and icons included
+
+## Scripts
 
 ```bash
 # install dependencies
-$ npm install
+pnpm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# development server (hot reload)
+pnpm dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# build for production
+pnpm build
 
-# generate static project
-$ npm run generate
+# validate words data
+pnpm validate-words
+
+# help for word management script
+pnpm words-help
+
+# lint code
+pnpm lint
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Internationalization
+
+- Translation files in `/messages/` (it.json, en.json, etc.)
+- Dynamic language switching via context and next-intl.
+
+## Project Structure
+
+- `src/app/` - Main app pages and layout
+- `src/components/` - UI components (DailyWord, WordChallenge, UserStats, etc.)
+- `src/context/LanguageContext.tsx` - Language context provider
+- `src/hooks/useTranslations.ts` - Translation hook
+- `src/data/words.json` - Word data
+- `public/` - Static assets, manifest, icons
+
+## PWA
+
+- Manifest and icons in `public/manifest.json`
+- Theme color and standalone display
+
+## License
+
+MIT
+
+---
+
+For more details, see the [Next.js documentation](https://nextjs.org/).
